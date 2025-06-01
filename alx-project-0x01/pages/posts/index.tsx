@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import { PostData, PostProps } from "@/interfaces";
 import PostModal from "@/components/common/PostModal";
 import { useState } from "react";
+import Footer from "@/components/layout/Footer";
 
 interface PostsPageProps {
   posts: PostProps[];
@@ -40,7 +41,9 @@ const Posts: React.FC<PostsPageProps> = ({ posts }) => {
             <PostCard key={post.id} {...post} />
           ))}
         </div>
+      
       </main>
+      <Footer/>
 
       {isModalOpen && (
         <PostModal onClose={() => setModalOpen(false)} onSubmit={handleAddPost} />

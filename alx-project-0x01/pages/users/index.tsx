@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
 import {UserData, UserProps } from "@/interfaces";
+import Footer from "@/components/layout/Footer";
 
 interface UsersPageProps {
   users: UserProps[];
@@ -59,6 +60,7 @@ const handleAddUser = (newUser: UserData) => {
           />
         )}
       </main>
+      <Footer/>
     </div>
   );
 };
